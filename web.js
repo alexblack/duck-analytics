@@ -1,13 +1,9 @@
 var express = require('express');
-var static = require('node-static');
 
 var app = express.createServer(express.logger());
-var file = new(static.Server)('./public');
 
+app.use(express.static('./public'));
 app.get('/', function(request, response) {
-  request.addListener('end', function() {
-    file.serve(request, response);
-  });
   response.send('Hello World!');
 });
 

@@ -3,7 +3,6 @@
   "version": "0.0.1",
   "dependencies": {
     "express": "2.5.0",
-    "pg": "0.5.4",
-    "node-static": "latest"
+    "pg": "0.5.4"
   }
 }
